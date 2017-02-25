@@ -1,16 +1,12 @@
-CyanogenMod 11 device tree for the Samsung GT-S7560/M
+KylessPAC device tree for Kylessopen devices (S756x) PAC-ROM 4.4.4 
 
-How to compile (On Ubuntu 14.XX):
+How to compile (On Ubuntu 16.XX.X):
 
-1. Open terminal, create a new folder and "cd" into it.
-2. Type "repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0" to initialize the repo.
-3. Copy the files from my "android_local_manifest" repo into "(CM directory)/.repo/local_manifests"
-4. Type "repo sync" and let the ~16GB code download (Find something to do, it will be a while)
-5. Check to make sure you followed the steps correctly. Go to "(CM directory)/device/samsung/kylessopen" and if this build tree is in there, you are ready to compile!
-6. Navigate to the main CM directory from within terminal and type "cd device/samsung/kylessopen && ./setup-makefiles.sh && cd ../../.. && cd vendor/cm &&  ./get-prebuilts && cd ../.. && . build/envsetup.sh && brunch kylessopen"
-7. Let it compile (Again, it will take a while)
+1. Open terminal and type "mkdir PAC && cd PAC"
+2. Type "repo init -u git://github.com/PAC-man/pacman.git -b pac-4.4" to initialize the repo.
+3. Copy the files from our "KylessPAC_local_manifests" repo into "(PAC)/.repo/local_manifests"
+4. Type "repo sync" and let the ~30GB code download (Find something to do, it will be a while)
+5. Check to make sure you followed the steps correctly. Go to "(PAC)/device/samsung/kylessopen" and if this build tree is in there, you are ready to compile!
 
-How to rebuild after modifying device tree:
 
-1. Naviage to the main CM directory from within terminal and type "repo sync && make clobber && cd device/samsung/kylessopen && ./setup-makefiles.sh && cd ../../.. && cd vendor/cm &&  ./get-prebuilts && cd ../.. && . build/envsetup.sh && brunch kylessopen"
-NOTE: "repo sync" updates the CM code to the latest; "make clobber" clears the build directory which is not necessary, but I reccomend it because sometimes make misses some changes, especially when modifying the device tree.
+
